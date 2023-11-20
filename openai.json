@@ -1,0 +1,81 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Contoso123 Store API",
+    "description": "API for searching through Contoso123 clothes and shirts. Use it whenever a user queries for information on clothes and Contoso123 products.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:7777"
+    }
+  ],
+  "paths": {
+    "/api/products/": {
+      "get": {
+        "summary": "Fetch all available products",
+        "description": "This API is used to fetch all the products available",
+        "operationId": "getProducts",
+        "responses": {
+          "200": {
+            "description": "Fetch all available products"
+          }
+        }
+      }
+    },
+    "/api/products/brands": {
+      "get": {
+        "summary": "Fetch all available brands",
+        "description": "This API is used to fetch all the brands available",
+        "operationId": "getBrands",
+        "responses": {
+          "200": {
+            "description": "Fetch all available brands"
+          }
+        }
+      }
+    },
+    "/api/products/testing": {
+      "get": {
+        "summary": "Fetch specific data (testing)",
+        "responses": {
+          "200": {
+            "description": "Fetch specific data (testing)"
+          }
+        }
+      }
+    },
+    "/api/products/search": {
+      "get": {
+        "summary": "Fetch all available products in a particular category",
+        "description": "This API is used to fetch all the products available in a particular category",
+        "responses": {
+          "200": {
+            "description": "Fetch all available products in a category"
+          }
+        }
+      }
+    },
+    "/api/products/sort": {
+      "get": {
+        "summary": "Sort all available products in a particular category",
+        "description": "This API is used to sort all the products available in a particular category",
+        "responses": {
+          "200": {
+            "description": "Sort all available products in a category"
+          }
+        }
+      }
+    },
+    "/api/products/filter/{category}/{value}": {
+      "get": {
+        "summary": "Fetch products in a specific category",
+        "responses": {
+          "200": {
+            "description": "Fetch products in a specific category"
+          }
+        }
+      }
+    }
+  }
+}
